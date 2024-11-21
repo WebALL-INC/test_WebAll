@@ -1,0 +1,180 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1"><link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Roboto+Mono:wght@700&display=swap" rel="stylesheet">
+     <link rel="preconnect" href="https://fonts.googleapis.com">
+     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+     <link href="https://fonts.googleapis.com/css2?family=Salsa&display=swap" rel="stylesheet">
+    <title>Open Website</title>
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <style>
+        * {
+            padding: 0;
+            margin: 0;
+            box-sizing: border-box;
+        }
+
+        body {
+            font-family: Arial, sans-serif;
+            background-color: #f4f4f9;
+        }
+
+        /* Sticky Navigation Bar */
+        .d1 {
+            background-color: orangered;
+            width: 100%;
+            height: 50px;
+            position: sticky;
+            top: 0;
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+            padding: 0 15px;
+            box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+        }
+
+        #n1 {
+            font-family: 'Salsa', cursive;
+            font-size: 1.5em;
+            color: white;
+            
+        }
+        #n2{
+        position: absolute;
+        top: 25px;
+    color: black;
+        right: 54px;
+        top: 11px;
+  
+  transform: translate(-10px,-5px);
+      }
+  #n3{
+        position: absolute;
+        top: 18px;
+    color: black;
+        right: 5px;
+       
+       
+  
+  transform: translate(-15px,-10px);
+      }
+     
+  #n4{
+        position: absolute;
+        top: 15px;
+    color: black;
+        right: 90px;
+  transform: translate(-15px,-10px);
+      } 
+ 
+/*
+        #n2 img {
+            height: 35px;
+            transition: transform 0.3s ease;
+        }
+
+        #n2 img:hover {
+            transform: rotate(360deg);
+        }
+*/
+        /* Search Bar Styling */
+
+        #web_name {
+            position: absolute;
+            top: 75px;
+            left: 50%;
+            transform: translateX(-50%);
+            padding: 15px;
+            width: 50%;
+            border-radius: 25px;
+            border: 2px solid #ccc;
+            font-size: 18px;
+            background-color: white;
+            outline: none;
+            box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+            transition: width 0.3s ease, border-color 0.3s ease, box-shadow 0.3s ease;
+        }
+
+        #web_name:focus {
+            width: 55%;
+            border-color: #ff6600;
+            box-shadow: 0 4px 10px rgba(255, 102, 0, 0.3);
+        }
+
+        #button {
+            position: absolute;
+            top: 80px;
+            right: 110px;
+            padding: 12px 25px;
+            font-size: 18px;
+            border-radius: 25px;
+            background-color: orangered;
+            color: white;
+            border: none;
+            cursor: pointer;
+            transition: background-color 0.3s ease, transform 0.3s ease;
+        }
+
+        #button:hover {
+            background-color: #ff3300;
+            transform: scale(1.1);
+        }
+
+        /* Smooth Transition for Inputs */
+        input[type="text"],
+        button {
+            transition: all 0.3s ease;
+        }
+
+        /* Styling for the settings icon */
+        #n2 {
+            transition: opacity 0.3s ease;
+        }
+
+        #n2:hover {
+            opacity: 0.7;
+        }
+    </style>
+    <script>
+        function openWebsite() {
+            // Get user input (website name)
+            var web_name = document.getElementById('web_name').value.trim().toLowerCase();
+
+            if (web_name === "") {
+                alert("Please enter a website name.");
+                return;
+            }
+
+            // Generate the URL
+            var url = "https://www." + web_name + ".com/";
+
+            // Open the URL in a new tab
+            window.open(url, '_blank');
+        }
+    </script>
+</head>
+<body>
+    <!-- Navigation Bar -->
+    <div class="d1">
+        <section id="n1">
+            <h1><b>WEBALL</b></h1>
+        </section>
+            <a id="n2" href="mainpages\setting\index.html"><span >
+                <img src="https://i.ibb.co/vzjMwnH/207-2074312-setting-icon-png.png" height="35">
+                <a id="n3" href="#"><span>
+                  <img src="https://i.ibb.co/p000Tdh/Screenshot-2024-11-20-114339-removebg-preview.jpg" height="35" >
+                  <a id="n4" href="mainpages\home\index.html"><span>
+                    <img src="https://i.ibb.co/NjB9zrG/Screenshot-2024-11-20-114259-removebg-preview-1.jpg" height="40" >
+                  </span></a>
+        </a>
+    </div>
+
+    <!-- Search Bar and Button -->
+    <input type="text" id="web_name" placeholder="Enter website name: (Eg: Youtube, Instagram, Vedantu)">
+    <button onclick="openWebsite()" id="button">Go</button>
+
+</body>
+</html>

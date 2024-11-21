@@ -1,0 +1,223 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <meta http-equiv="refresh" content="3; url=#">
+  <title>Centered Animation</title>
+  
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Titillium+Web:ital,wght@1,300&display=swap" rel="stylesheet">
+  <link href="https://fonts.googleapis.com/css2?family=Salsa&display=swap" rel="stylesheet">
+  
+  <style>
+    /* Reset and body styling */
+    body {
+      margin: 0;
+      padding: 0;
+      display: flex;
+      justify-content: center;
+      align-items: center;
+      height: 100vh;
+      flex-direction: column; /* Stack the items vertically */
+      background-color: #f0f0f0; /* Optional background color for contrast */
+      text-align: center; /* Center the text inside the body */
+    }
+
+    /* Center the logo */
+    .logo {
+      display: flex;
+      justify-content: center;
+      align-items: center;
+      margin-bottom: 20px; /* Space between logo and animated text */
+    }
+
+    /* Parent div styling (for animated letters) */
+    #parentdiv1 {
+      display: flex;
+      justify-content: center;
+      align-items: center;
+      gap: 5px; /* Space between letters */
+      position: relative;
+      font-family: 'Salsa', cursive;
+      margin-bottom: 20px; /* Space between animated text and quote */
+    }
+
+    /* Styling for the quote */
+    #quote {
+      opacity: 0;
+      font-family: 'Salsa', cursive;
+      animation-name: qanimation;
+      animation-duration: 0.6s;
+      animation-delay: 0.6s;
+      animation-fill-mode: forwards;
+      animation-iteration-count: 1;
+      animation-timing-function: ease-in-out;
+    }
+
+    @keyframes qanimation {
+      from {
+        opacity: 0;
+      }
+      to {
+        opacity: 100%;
+      }
+    }
+
+    /* Animations for each letter of "WEBALL" */
+    #d1, #d2, #d3, #d4, #d5, #d6 {
+      opacity: 0;
+      font-size: 50px;
+      position: absolute;
+      top: 306px;
+      animation-timing-function: ease-in-out;
+    }
+
+    #d1 {
+      animation-name: text;
+      animation-duration: 0.1s;
+      animation-delay: 0.1s;
+      animation-fill-mode: forwards;
+    }
+
+    #d2 {
+      animation-name: text1;
+      animation-duration: 0.2s;
+      animation-delay: 0.2s;
+      animation-fill-mode: forwards;
+    }
+
+    #d3 {
+      animation-name: text2;
+      animation-duration: 0.3s;
+      animation-delay: 0.3s;
+      animation-fill-mode: forwards;
+    }
+
+    #d4 {
+      animation-name: text3;
+      animation-duration: 0.4s;
+      animation-delay: 0.4s;
+      animation-fill-mode: forwards;
+    }
+
+    #d5 {
+      animation-name: text4;
+      animation-duration: 0.5s;
+      animation-delay: 0.5s;
+      animation-fill-mode: forwards;
+    }
+
+    #d6 {
+      animation-name: text5;
+      animation-duration: 0.6s;
+      animation-delay: 0.6s;
+      animation-fill-mode: forwards;
+    }
+
+    @keyframes text {
+      from {
+        left: 0px;
+        opacity: 0;
+      }
+      to {
+        left: 117px;
+        opacity: 100%;
+      }
+    }
+
+    @keyframes text1 {
+      from {
+        left: 0px;
+        opacity: 0;
+      }
+      to {
+        left: 147px;
+        opacity: 100%;
+      }
+    }
+
+    @keyframes text2 {
+      from {
+        left: 0px;
+        opacity: 0;
+      }
+      to {
+        left: 165px;
+        opacity: 100%;
+      }
+    }
+
+    @keyframes text3 {
+      from {
+        left: 0px;
+        opacity: 0;
+      }
+      to {
+        left: 185px;
+        opacity: 100%;
+      }
+    }
+
+    @keyframes text4 {
+      from {
+        left: 0px;
+        opacity: 0;
+      }
+      to {
+        left: 205px;
+        opacity: 100%;
+      }
+    }
+
+    @keyframes text5 {
+      from {
+        left: 0px;
+        opacity: 0;
+      }
+      to {
+        left: 223px;
+        opacity: 100%;
+      }
+    }
+
+  </style>
+</head>
+
+<body>
+  <!-- Logo Section -->
+  <div class="logo">
+    <img class="logo1" src="https://i.ibb.co/wNCkjCp/Whats-App-Image-2024-11-21-at-19-41-48-4b591ce6-removebg-preview.png" height="250" alt="Logo">
+  </div>
+
+  <!-- Animated Letters Section -->
+  <div id="parentdiv1">
+    <div id="d1">
+      <h1>W</h1>
+    </div>
+    <div id="d2">
+      <h1>E</h1>
+    </div>
+    <div id="d3">
+      <h1>B</h1>
+    </div>
+    <div id="d4">
+      <h1>A</h1>
+    </div>
+    <div id="d5">
+      <h1>L</h1>
+    </div>
+    <div id="d6">
+      <h1>L</h1>
+    </div>
+  </div>
+
+  <!-- Quote Section -->
+  <div id="quote">
+    <p>MEET THE WORLD IN ONE CLICK</p>
+  </div>
+</body>
+
+</html>
